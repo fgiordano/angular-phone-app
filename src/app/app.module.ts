@@ -2,10 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { routes } from './app.routing';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
+
+
 
 import { AppComponent } from './app.component';
 import { PhoneListComponent } from './phone-list/phone-list.component';
 import { PhoneDetailsComponent } from './phone-details/phone-details.component';
+import {PhoneService} from './phone.service'
 
 
 @NgModule({
@@ -20,7 +25,7 @@ import { PhoneDetailsComponent } from './phone-details/phone-details.component';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [PhoneService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
