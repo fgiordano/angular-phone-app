@@ -11,8 +11,9 @@ import { AppComponent } from './app.component';
 import { PhoneListComponent } from './phone-list/phone-list.component';
 import { PhoneDetailsComponent } from './phone-details/phone-details.component';
 import {PhoneService} from './phone.service';
-import { FileSelectDirective } from "ng2-file-upload";
+// import { FileSelectDirective } from "ng2-file-upload";
 import { AddPhoneComponent } from './add-phone/add-phone.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 @NgModule({
@@ -20,13 +21,14 @@ import { AddPhoneComponent } from './add-phone/add-phone.component';
     AppComponent,
     PhoneListComponent,
     PhoneDetailsComponent,
-    FileSelectDirective,
+    // FileSelectDirective,
     AddPhoneComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    FileUploadModule,
     RouterModule.forRoot(routes)
   ],
   providers: [PhoneService],
