@@ -8,7 +8,7 @@ import { FileUploader } from "ng2-file-upload";
 })
 export class AddPhoneComponent implements OnInit {
   uploader: FileUploader = new FileUploader({
-    url: `/phones/`
+    url: `/api/phones/`
   });
 
   newPhone = {
