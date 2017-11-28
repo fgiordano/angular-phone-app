@@ -11,6 +11,8 @@ import { PhoneService } from './../phone.service';
 })
 export class PhoneDetailsComponent implements OnInit {
 
+  phone: Object;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
